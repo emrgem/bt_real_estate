@@ -40,7 +40,7 @@ SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['btrealestate-production-384e.up.railway.app','localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['btrealestate-production-8a0f.up.railway.app','localhost', '127.0.0.1']
 
 
 # Application definition
