@@ -41,7 +41,12 @@ SECRET_KEY = SECRET_KEY
 DEBUG = True
 
 ALLOWED_HOSTS = ['btrealestate-production-8a0f.up.railway.app','localhost', '127.0.0.1']
-
+#CSRF FOR RAILWAY.APP
+CSRF_TRUSTED_ORIGINS = [
+    'https://btrealestate-production-8a0f.up.railway.app'
+]
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -62,13 +67,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'btre.urls'
